@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Enabling strict Mode
+        "use strict"
+
+
+        let a = 50;
+        let b = "This is string"; 
+        console.log(a)
+        console.log(b) 
+
+        function hello(){
+            console.log("Hello Areeba")
+        }
+
+        // Objects
+        let obj = {
+            a: "Hello",
+            b: 100,
+            func: function myfunc(number){
+                console.log("Entered Value is: " + number)
+            }
+        }
+
+
+        // Event Listner
+        document.addEventListener("click", function click(){
+            console.log("clicked")
+            // alert("clicked")
+
+            // It return true or false 
+            // let conf = confirm("Are you sure? ")
+            // console.log(conf)
+        })
+
+        // Arrays
+        let array = [10, 20, 30]
+        array.forEach(() => {
+            for (let i = 0; i < array.length; i++) {
+                const element = array[i];
+                console.log(element)
+            }
+        })
+
+        // Functions and this
+        /* 
+            I can access window obj using below this cuz it is inside func.
+            Normal function =  this undefined
+            Arrow function = this is defined ( window obj ). Means this bahir ke obj ko refer kare ga
+        */
+        function myfunc1(number){
+            console.log("'this' inside normal function is: " + this)
+        }
+        myfunc1()
+
+        let myfunc2 = (number) => {
+            console.log("'this' inside callback function is: " + this)
+        }
+        myfunc2()
+
+        // Arrow func inside obj
+        /* 
+            Normal function =  If inside obj then it will return the obj
+        */
+        let myobj = {
+            a: this,
+            objfunc1: function func01(number){ 
+                        console.log("'this' inside obj normal function is: ")
+                        console.log(this)
+                       },
+
+            objfunc2: (number) => {
+                        console.log("'this' inside obj callback function is: ")
+                        console.log(this)
+                       }
+        }
+
+        console.log(myobj.a)
+        myobj.objfunc1()
+        myobj.objfunc2()
+
+        console.log("'this' value using console.log is: " + this)
+
+        // Call back functions
+        // It will invoke when work is done
+        setTimeout(() => {
+             console.log("yayya")
+        }, 3000)
+        console.log("I am after Timeout")
+
+
+
+    </script>
+
+
+</head>
+<body>
+
+    <h1> I am Learning JS </h1>
+
+    
+    
+</body>
+</html>
