@@ -97,6 +97,138 @@
       . We have learnt propTypes, defaultProps(What value to use if not passing value).
       . Always set default props
       . In Navbar we have only discussed about how to pass and use props
+      In this case if this is not working then it will have high impact on the test xases and then if this will not handle if will impact on the outer cases
 
 
     */
+
+      
+      
+    //  =============================== 7 video =============================== //
+    /* OBJECT: How to handle the event, How to setState, useState hook help us to make state var.
+               We have listen for onChange(), Converting text from l to U with reloading the page
+      Now using TextForm.JS
+      Shift + tab for back the div elements
+      we have change the names, formatting in tags.
+      Now we are adding btns so that when we click some func inside comp renders. Use className="btn btn-primary"
+      
+      Now discussing states
+      If i have made the component it has state
+      States: If comp is empty it is his state
+              If i have written something that is his state
+              So basically what ever the content here i want to make them a var. So making it part of state
+      Props: We pass props to comp and that props render in our component
+      State: Belong to comp
+      So import useState from React
+      useState: It is a hook
+      Hooks are new edition. In class based comp we can see alot of func. But func comp are use widely
+      Use newState before return. Using setText we can update any text without reloading the page.
+      But i am using func so how to use the useState cuz in class to set the state we use this.state. But in func to set
+      the state using Hooks()
+      Hooks: Help in using features of class without making class
+      eg:
+        const [text, setText] = useState("Enter")
+        Set the R.H.S as a 1st parameter means in text
+        To update text use the updationFunc("Hello") not like text = "Hello"
+
+      Now using btns but he is saying make prototype of onChange=(handleOnChange)
+
+      Now when i am clicking Uppercase button it is rerendering it self cuz inside that we have setText().
+      Why the content is changing cuz it is a state varif i write value ={hello} it will not change cuz it is normal var.
+      By default react dont watch whole var
+
+      When i am typing onChange func is running but i cant type cuz i have written value={text}. 
+      If i write/change something onChange() will running
+      When ever you are listening something from an event in such a way that the above i am listening for onChange() this func will run and we get event obj for free.
+      Well use this func alot of time when using input, textareas.
+
+      Whenever user change textarea so value which is text value={text} will change at that moment like value + Whatever u write
+      using (event.target.value). Now you can type in textareaa. So whenever i type onChange() run and whatever i type will be concatenate with text. So our text is also updating
+
+    */
+    
+
+
+    //  =============================== 8 video =============================== //
+    /*
+      text.split(" ") makes an array and length of an array is word text.split(" ").length
+      Inside the container in APP.js we are using About Comp
+
+
+    */
+
+
+      //  =============================== 10 video =============================== //
+
+      /*
+        style={myStyle}, myStyle is obj
+        If we want to change the style using inspect:
+        1. Go to inspect 
+        2. and go to element and select the tag for whic you want to change style
+        3. Now go to console and use $0 to refer that element and write $0.style.backgroundColor = 'cyan'
+        $0 is use to refer the element. Dont use in vscode
+        React use camel case just like JS
+        We are making style as a state var
+        In this video we are using 2 state var:
+          const [btnText, setBtnText]
+          const [myStyle, setMyStyle]
+        In About.JS
+
+
+      */
+
+    //  =============================== 12 video =============================== //
+
+    /*
+      I want to manage the whole state of my website or react application using App.JS. Means making all controls in App.JS
+      e.g.
+        To Enable dark mode i will make all of that var in app.js. 
+      ` ` => Tempelate Literal . After writing this inside it everything is string. So when i use backtick`` i can use JS using ${}
+      text-light: To change the text to white
+      {{}} : Outer { } is for writing JS and { } is for writing Obj 
+      #dedde9
+
+    */
+
+
+    //  =============================== 13 video =============================== //
+    /* Object : Working in Alert Component
+      We are making alert state: is obj here
+      showAlert() help to show alert messages
+      TextForm ko jab koi alert karna hoga to hum usee showAlert() pass karain ge 
+      If this becomes (  props.alert &&  ) false in Alert.js then after && everything will run. If before && whatever written is false
+      then after && will no run. Simple If first becomeas true then Second will evaluate and vice versa
+
+    */
+
+    //  =============================== 13 video =============================== //
+    /*  Object:
+      Changing Favicon and title in index.html
+      We have change the title whne we are shifting from Light to Dark mode and vice versa. But this is not prefered. 
+      eg. 
+        FB use to to show how many message you have in the title or gmal use it to show how many unread messages you have
+      
+      1 thing which is a bad user experience which is telling you that you have a virus.
+      So how you can do this using setInterval() every 2 sec
+
+    */
+
+   //  =============================== 13 video =============================== //
+   /*
+      To navigate from one page to another page in a same website we can use Rect Router
+      React always do partial matching so use exact in the path
+   */
+
+  //  =============================== 19 video =============================== //
+  /*
+    Removing Empty string from array when using split.
+    We get this after using split = [""]. If nothing is written.
+    So i want to remove allthe blanks from this. We can do this using "filter()" Which take func as a parameter
+    .filter() is a higher array order method
+    .filter((element) => {return element.length != 0}).length
+    element : element of an array
+    element.length != 0 : If length of that element != 0 it will not stay in that array
+    cls: Cumulative layout shift. So when alert disappear our layout shift
+
+
+  */
